@@ -49,4 +49,4 @@ print(products)
 # pprint(products)
 
 # TODO: write some Python code here to produce the desired output
-Make sure to save Python files like this whenever you're done editing them. After setting up a virtual environment, we will be ready to run this file.
+#Make sure to save Python files like this whenever you're done editing them. After setting up a virtual environment, we will be ready to run this file.
