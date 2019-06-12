@@ -111,13 +111,22 @@ for selected_id in selected_ids:
 #The total amount owed, formatted as US dollars and cents(e.g. $4.89), calculated by adding together the amount of tax owed plus the total cost of all shopping cart items
 #A friendly message thanking the customer and/or encouraging the customer to shop again
 
+print("-------------")
 
 
-print("TOTAL PRICE:" + " " + str(total_price)) #TODO --> Format as USD 
+print("Subtotal:" + " " + str(total_price)) #TODO --> Format as USD 
 
 
+print("Plus NYC Sales Tax (8.875%): ")
 
 
+print("Total: ")
+
+
+print("-------------")
+
+
+print("Thank you for your business, please come again!")
 
 
 
