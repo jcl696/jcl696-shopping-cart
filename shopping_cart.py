@@ -13,6 +13,20 @@
 #
 
 
+
+# Info Capture / Inputs 
+
+selected_id = input("Please input a product identifier: ")
+
+print(selected_id)
+
+print(type(selected_id))
+
+
+
+## Info Display /  Outputs
+
+
 products = [
     {"id": 1, "name": "Chocolate Sandwich Cookies",
         "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
@@ -56,7 +70,7 @@ products = [
         "department": "beverages", "aisle": "juice nectars", "price": 4.25}
 ]  # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
-print(products)
+#print(products)
 # pprint(products)
 
 # TODO: write some Python code here to produce the desired output
