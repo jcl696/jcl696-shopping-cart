@@ -12,18 +12,6 @@
 #A friendly message thanking the customer and/or encouraging the customer to shop again
 #
 
-
-
-# Info Capture / Inputs 
-
-selected_id = input("Please input a product identifier: ")
-
-print(selected_id)
-
-print(type(selected_id))
-
-
-
 ## Info Display /  Outputs
 
 
@@ -75,3 +63,22 @@ products = [
 
 # TODO: write some Python code here to produce the desired output
 #Make sure to save Python files like this whenever you're done editing them. After setting up a virtual environment, we will be ready to run this file.
+
+#Info Capture / Inputs
+
+selected_id = input("Please input a product identifier: ")  # (string)
+
+matching_products = [p for p in products if str(p["id"]) == str(selected_id)] #matching_products = list
+
+matching_product = matching_products[0]
+
+print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
+
+
+
+#look up a product for a given input
+
+
+#print(selected_id)
+
+#print(type(selected_id))
