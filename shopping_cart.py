@@ -66,6 +66,7 @@ products = [
 #Info Capture / Inputs
 
 total_price = 0
+nyc_sales_tax = 0
 selected_ids = []
 
 while True:
@@ -102,6 +103,8 @@ for selected_id in selected_ids:
      matching_products=[p for p in products if str(p["id"]) == str(selected_id)]  # matching_products = list
      matching_product = matching_products[0]
      total_price = total_price + matching_product["price"]
+     nyc_sales_tax = nyc_sales_tax + (.08875 * matching_product["price"])
+
      print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
 
 
@@ -117,7 +120,7 @@ print("-------------")
 print("Subtotal:" + " " + str(total_price)) #TODO --> Format as USD 
 
 
-print("Plus NYC Sales Tax (8.875%): ")
+print("Plus NYC Sales Tax (8.875%): " + " " + str(nyc_sales_tax))
 
 
 print("Total: ")
