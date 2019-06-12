@@ -88,7 +88,13 @@ print("JOE'S GROCERY EMPORIUM")
 print("WEB: www.JoesGroceryEmporium.com")
 print("PHONE: 888-555-1212")
 print("ADDRESS: 14 West Walnut Avenue, New York, NY 10011")
-print("CHECKOUT TIME: ") #add in the date stamp here
+# The date and time of the beginning of the checkout process, formatted in a human-friendly way(e.g. 2019-06-06 11: 31 AM)
+print("CHECKOUT TIME: ")
+
+
+print("-------------")
+
+print("Shopping cart items:")
 
 
 
@@ -99,7 +105,11 @@ for selected_id in selected_ids:
      print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
 
 
-
+# TODO 
+#The total cost of all shopping cart items, formatted as US dollars and cents(e.g. $4.50), calculated as the sum of their prices
+#The amount of tax owed(e.g. $0.39), calculated by multiplying the total cost by a New York City sales tax rate of 8.75 % (for the purposes of this project, groceries are not exempt from sales tax)
+#The total amount owed, formatted as US dollars and cents(e.g. $4.89), calculated by adding together the amount of tax owed plus the total cost of all shopping cart items
+#A friendly message thanking the customer and/or encouraging the customer to shop again
 
 
 
