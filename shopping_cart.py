@@ -74,12 +74,23 @@ while True:
      if selected_id == "DONE":
          break
      else:
-         
          selected_ids.append(selected_id)
 
 ## Info Display /  Outputs
 
 #print(selected_ids)
+
+print("-------------")
+print("YOUR GROCERY RECEIPT")
+print("-------------")
+
+print("JOE'S GROCERY EMPORIUM")
+print("WEB: www.JoesGroceryEmporium.com")
+print("PHONE: 888-555-1212")
+print("ADDRESS: 14 West Walnut Avenue, New York, NY 10011")
+print("CHECKOUT TIME: ") #add in the date stamp here
+
+
 
 for selected_id in selected_ids:
      matching_products=[p for p in products if str(p["id"]) == str(selected_id)]  # matching_products = list
@@ -88,7 +99,12 @@ for selected_id in selected_ids:
      print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
 
 
+
+
+
+
 print("TOTAL PRICE:" + " " + str(total_price)) #TODO --> Format as USD 
+
 
 
 
