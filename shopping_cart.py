@@ -117,14 +117,21 @@ for selected_id in selected_ids:
 print("-------------")
 
 
-print("Subtotal:" + " " + str(subtotal_price)) #TODO --> Format as USD 
-
-
-print("Plus NYC Sales Tax (8.875%): " + " " + str(nyc_sales_tax))
+#subtotal_price = " ${0:.2f}".format(subtotal_price)
+#nyc_sales_tax = " ${0:.2f}".format(nyc_sales_tax)
+#total_price = "${0: .2f})".format(subtotal_price + nyc_sales_tax)
 
 total_price = (subtotal_price + nyc_sales_tax)
 
-print("Total: " + str(total_price))
+
+# TODO --> Format as USD
+print("Subtotal:" + " " + " ${0:.2f}".format(subtotal_price))
+
+
+print("Plus NYC Sales Tax (8.875%): " + " " + " ${0:.2f}".format(nyc_sales_tax))
+
+
+print("Total: " + " ${0:.2f}".format(total_price)) # string formatting turns float --> str
 
 
 print("-------------")
