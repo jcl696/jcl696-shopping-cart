@@ -12,6 +12,7 @@
 #A friendly message thanking the customer and/or encouraging the customer to shop again
 #
 
+import datetime
 
 
 products = [
@@ -89,8 +90,16 @@ print("JOE'S GROCERY EMPORIUM")
 print("WEB: www.JoesGroceryEmporium.com")
 print("PHONE: 888-555-1212")
 print("ADDRESS: 14 West Walnut Avenue, New York, NY 10011")
+
 # The date and time of the beginning of the checkout process, formatted in a human-friendly way(e.g. 2019-06-06 11: 31 AM)
-print("CHECKOUT TIME: ")
+
+now = datetime.datetime.now()
+
+
+print(now)
+
+
+#print("CHECKOUT TIME: " + str(now))
 
 
 print("-------------")
@@ -105,7 +114,7 @@ for selected_id in selected_ids:
      subtotal_price = subtotal_price + matching_product["price"]
      nyc_sales_tax = nyc_sales_tax + (.08875 * matching_product["price"])
 
-     print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
+     print("+ " + matching_product["name"] + " " + "(${0:.2f})".format(matching_product["price"]))
 
 
 # TODO 
@@ -117,21 +126,16 @@ for selected_id in selected_ids:
 print("-------------")
 
 
-#subtotal_price = " ${0:.2f}".format(subtotal_price)
-#nyc_sales_tax = " ${0:.2f}".format(nyc_sales_tax)
-#total_price = "${0: .2f})".format(subtotal_price + nyc_sales_tax)
-
 total_price = (subtotal_price + nyc_sales_tax)
 
 
-# TODO --> Format as USD
-print("Subtotal:" + " " + " ${0:.2f}".format(subtotal_price))
+print("Subtotal:" + " " + "${0:.2f}".format(subtotal_price))
 
 
-print("Plus NYC Sales Tax (8.875%): " + " " + " ${0:.2f}".format(nyc_sales_tax))
+print("Plus NYC Sales Tax (8.875%):" + " " + "${0:.2f}".format(nyc_sales_tax))
 
 
-print("Total: " + " ${0:.2f}".format(total_price)) # string formatting turns float --> str
+print("Total: " + "${0:.2f}".format(total_price)) # string formatting turns float --> str
 
 
 print("-------------")
