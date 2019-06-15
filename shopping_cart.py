@@ -58,12 +58,16 @@ products = [
 subtotal_price = 0
 nyc_sales_tax = 0
 selected_ids = []
+count = len(products)
+#print(count)
 
 while True:
      selected_id=input("Please input a product identifier: ")  # (string)
-
      if selected_id == "DONE":
          break
+     elif int(selected_id) > count:
+         print("Product doesn't exist, please enter another product number.")
+
      else:
          selected_ids.append(selected_id)
 
@@ -129,5 +133,6 @@ print("-------------")
 
 
 print("Thank you for your business, please come again!")
+
 
 
