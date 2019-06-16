@@ -5,8 +5,20 @@
 #TODO
 #The date and time of the beginning of the checkout process, formatted in a human-friendly way(e.g. 2019-06-06 11: 31 AM)
 
-import datetime
+#I tried to import sendgrid and use .env to start the email process but received module errors
 
+import datetime
+#import os
+#from dotenv import load_dotenv
+#from sendgrid import SendGridAPIClient
+#from sendgrid.helpers.mail import Mail
+
+
+#SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
+#MY_ADDRESS = os.environ.get("MY_EMAIL_ADDRESS")
+
+#MY_EMAIL_ADDRESS = "jcl696@stern.nyu.edu"
+#SENDGRID_API_KEY = "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"
 
 products = [
     {"id": 1, "name": "Chocolate Sandwich Cookies",
@@ -119,20 +131,17 @@ print("-------------")
 
 total_price = (subtotal_price + nyc_sales_tax)
 
-
 print("Subtotal:" + " " + "${0:.2f}".format(subtotal_price))
-
-
 print("Plus NYC Sales Tax (8.875%):" + " " + "${0:.2f}".format(nyc_sales_tax))
-
-
 print("Total: " + "${0:.2f}".format(total_price)) # string formatting turns float --> str
 
 
 print("-------------")
 
-
 print("Thank you for your business, please come again!")
+
+
+# send an email receipt via email 
 
 
 
